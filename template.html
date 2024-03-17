@@ -1,0 +1,92 @@
+
+<!-- saved from url=(0044)https://css1.seattleu.edu/~lil/template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Template for your web application</title></head>
+<body bgcolor="ffffff"> 
+
+
+<font face="times" size="3">
+<hr noshade="noshade" size="2">
+
+<h1>&lt;Research Participant Database&gt;</h1>
+<b>Team Members:</b> &lt;Eloho Okoloko&gt;<br>
+<br>
+<hr>
+<ul>
+<li><b>Relations:</b><br><br>
+<i>In the following, substitute actual names for Relation1, Relation2 etc.
+Have as many entries as the number of relations in your project. Clicking
+a link on a relation name should execute an SQL query and list
+*all* the tuples in that particular relation (of course, they don't work
+below). Your output should be presented
+in a neat orderly fashion, one row for each tuple and columns are evident.</i><br><br>
+<ol>
+<li><a href="http://css1.seattleu.edu/~eokoloko/rpdb.php" target="_blank">ParticipantInformation</a> 
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/MedicalRecords.php">MedicalRecords</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/ConsentForm.php">ConsentForm</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/Study.php">Study</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/Tests.php">Tests</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/Investigator.php">Investigator</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/ParticipantStudy.php">ParticipantStudy</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/ParticipantTest.php#">ParticipantTest</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/ParticipantConsent.php#">ParticipantConsent</a>
+</li><li><a href="http://css1.seattleu.edu/~eokoloko/InvestigatorTest.php#">InvestigatorTest</a>
+</li></ol>
+<br><br>
+<hr>
+</li><li><b>Queries:</b><br><br>
+<i>In the following, substitute the english query description for each of
+the five queries that you did in milestone3 of your project. Again, clicking
+a link on the query name should execute the appropriate SQL query and
+list the tuples that are the answer to that particular query. Again,
+make sure your output is neatly ordered and columns are evident.<br><br>
+<ol>
+<li><a href="Query1.php">Query1</a>: This query performs an inner join between the ParticipantInformation, ParticipantTest, and Tests tables to return the first name, last name, and test name for each participant. It matches records in all 3 tables using the participant ID and test ID foreign keys. ;
+</li><li><a href="Query2.php">Query2</a>: This query uses the AVG() aggregate function to calculate the average age of participants in each study. It subtracts the year of the DOB from the current year to get the age for each participant. Then it averages those ages per study using AVG and GROUP BY on the StudyID.;
+</li><li><a href="Query3.php">Query3</a>: This query uses a subquery within the WHERE clause to return only participant records where the participant ID exists in the ParticipantConsent table with a 'Yes' response. The subquery selects qualifying IDs.;
+</li><li><a href="Query4.php">Query4</a>: This query retrieves the study name and the total number of tests conducted for each study, but only for studies with more than 1 test conducted. It gets the total number of tests performed for each study with a filter of greater than 0.;
+</li><li><a href="Query5.php">Query5</a>: This query performs a left join from ParticipantInformation to ParticipantConsent, keeping all records from the left table (ParticipantInformation) even if there is no match in the right table. It returns participants with no consent record.;
+</li></ol>
+<br><br>
+<hr>
+</i></li><li><i><b>Ad-hoc Query:</b><br><br>
+<i>Here, provide a free-form box and two buttons called
+"Submit" and "Clear". The intent is that the user can enter any arbitrary
+SQL query in the box and click the submit button; The action should be that you should
+execute that query on the database and bring up the answers, once again, in a neat orderly fashion. Notice that the input
+can be any legal SQL query (permissible under your DB system, of course).
+</i><br><br>
+<form method="POST" action="HelloWorld.php">
+      <table>
+        <tbody><tr>
+          <td align="right">
+            <strong>Please enter your query here<br></strong>
+          </td>
+          <td>
+            <select id="action" name="action">
+            <option value="select">SELECT</option>
+            <option value="insert into">INSERT INTO</option>
+            <option value="update">UPDATE</option>
+            <option value="delete from">DELETE FROM</option>
+            </select>
+            <input size="30" name="query" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            <input value="Clear" type="reset">
+          </td>
+          <td>
+            <input value="Submit" type="submit">
+          </td>
+        </tr>
+      </tbody></table>
+    </form>
+</i></li></ul><i>
+<p></p>
+</i></font><i><i>
+<hr noshade="noshade" size="2">
+<p></p>
+
+</i></i>
+</body></html>
